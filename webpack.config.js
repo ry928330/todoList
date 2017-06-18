@@ -38,7 +38,12 @@ module.exports = {
   resolve: {
     extensions: ['.css', '.less', '.js']
   },
+  devServer: {
+    port: 8090,
+  },
   plugins: [
     new ExtractTextPlugin("style.css")
   ]
 }
+
+

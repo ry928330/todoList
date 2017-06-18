@@ -7,16 +7,24 @@ class TodoList extends Component {
 	render() {
 		let { todos, onTodoClick } = this.props
 		return (
-			<ul>
-				{
-					todos.map( (todo, index) => {
-						<Todo {...todo}
-							key = {index}
-							onTodoClick = { (index) => onTodoClick(index) }
-						/>
-					})
-				}
-			</ul>
+			<div className = { style.toDoListOuter }>
+				<h2 className = { style.toDoListTitle }>正在进行</h2>
+				<ul>
+					{
+						todos.map( (todo, index) => {
+							return (
+								<Todo 
+									todo = { todo }
+									key = {index}
+									index = {index}
+									onTodoClick = { (index) => onTodoClick(index) }
+								/>
+							)
+						})
+					}
+				</ul>
+			</div>
+
 		)
 	}
 }

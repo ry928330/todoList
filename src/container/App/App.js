@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import AddTodo from '../../components/AddTodo/AddTodo.js'
 import TodoList from '../../components/TodoList/TodoList.js'
 import Footer from '../../components/Footer/Footer.js'
+import Completed from '../../components/Completed/Completed.js'
 import { mapStateToProps, mapDispatchToProps } from '../../Redux/Store/store.js'
 
 class App extends Component {
@@ -18,7 +19,7 @@ class App extends Component {
 			<div>
 				<AddTodo onAddClick = { onAddClick }/>
 				<TodoList todos = {visibleTodos} onTodoClick = { onTodoClick }/>
-				
+				<Footer filter = { visibilityFilter } onFilterChange = { onFilterChange }/>
 			</div>
 		)
 	}
