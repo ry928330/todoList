@@ -10,4 +10,8 @@
  }
  <Footer filter = { visibilityFilter } onFilterChange = { nextFilter => onFilterChange(nextFilter)}/>
  <TodoList todos = {visibleTodos} onTodoClick = { onTodoClick }/>
+
  <AddTodo onAddClick = { onAddClick }/>
+
+ <Completed todos = {visibleTodos} onTodoClick = { onTodoClick }/>
+

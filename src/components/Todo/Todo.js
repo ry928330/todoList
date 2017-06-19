@@ -4,10 +4,13 @@ import style from './Todo.css'
 
 class Todo extends Component {
 	render () {
-		let { todo, onTodoClick } = this.props
+		let { todo, onTodoClick, index } = this.props
 		return (
-			<li style = {{textDecoration: todo.completed ? 'line-through' : 'none'}}>
-				<input className = { style.TodoInput } type = "checkbox" onclick = { () => onTodoClick() }/>
+			<li>
+				<input className = { style.TodoInput } type = "checkbox" 
+					onClick = { () => onTodoClick(index) }
+					checked = { todo.completed ? 'checked' : '' }
+				/>
 				<p> {todo.text} </p>
 			</li>
 		)

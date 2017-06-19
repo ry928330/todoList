@@ -13,7 +13,7 @@ function getVisibleTodos(todos, filter) {
 		case visibilityFilters.SHOW_COMPLETED:
 			return todos.filter( todo => todo.completed)
 		case visibilityFilters.SHOW_ACTIVE:
-			return todo.filter( todo => !todo.completed)
+			return todos.filter( todo => !todo.completed)
 	}
 }
 
